@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, GetCoding">
+    <meta name="keywords" content="分类: UniRx, GetCoding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | GetCoding</title>
+    <title>分类: UniRx | GetCoding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -364,7 +364,7 @@
                 
                 <a href="/categories/UniRx/" title="UniRx: 4">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             style="background-color: #F9EBEA;">UniRx
                         <span class="tag-length">4</span>
                     </span>
@@ -378,65 +378,218 @@
 
 
     
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/01/15/UniRx/UniRx%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                先来看一下之前的一段代码：
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+using System;
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/UniRx/" class="post-category">
+                                    UniRx
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Unity3D/">
+                            <span class="chip bg-color">Unity3D</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/01/15/UniRx/%E7%8B%AC%E7%AB%8B%E7%9A%84Update/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                之前说过，如果在Update里面掺杂大量无关的逻辑和判断，会导致代码非常不容易阅读，这种情况还是比较常见的，比如：
+private void Update()&#123;
+    if(A)&#123;
+        ...
+    &#
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/UniRx/" class="post-category">
+                                    UniRx
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"UniRx","max":8}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [4],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Unity3D/">
+                            <span class="chip bg-color">Unity3D</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/01/15/UniRx/%E5%AE%9A%E6%97%B6%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Unity种几种定时功能实现的方式一览：
+// 普通的实现方式
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-    radarChart.setOption(option);
-</script>
+namespac
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/UniRx/" class="post-category">
+                                    UniRx
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Unity3D/">
+                            <span class="chip bg-color">Unity3D</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/01/15/UniRx/Add%20To/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+AddTo API就是字面意思——添加到。添加到Unity的GameObject或者MonoBehaviour
 
+为什么要添加到GameObject或者MonoBehaviour呢？因为GameObject和MonoBehaviour可以
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/UniRx/" class="post-category">
+                                    UniRx
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Unity3D/">
+                            <span class="chip bg-color">Unity3D</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="test article, Hexo">
+    <meta name="keywords" content="GetCoding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>test article | Hexo</title>
+    <title>GetCoding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -32,6 +32,8 @@
 <meta name="generator" content="Hexo 5.2.0"></head>
 
 
+
+
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -41,7 +43,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">GetCoding</span>
                 </a>
             </div>
             
@@ -140,7 +142,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">GetCoding</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -308,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">test article</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -442,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-04
+                    2020-01-15
                 </div>
                 
 
@@ -458,7 +460,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h1>
+                <h1 id="Variables-in-C"><a href="#Variables-in-C" class="headerlink" title="Variables in C++"></a>Variables in C++</h1><p>在我们实际编程操作的过程中，我们需要操作数据(data)，我们需要将我们的数据存放到特定的<strong>变量 variable</strong>中。 </p>
+<p>C++中定义了一套包括<strong>算术类型 arithmetic type</strong> 和 <strong>空类型 void</strong>在内的基本数据类型。其中，算数类型包括了字符、整型、布尔、浮点。空类型不对应具体的值。</p>
+<blockquote>
+<p>所以，变量基本上说就是，允许我们给一个存储在内存中的数据一个 <strong>名字</strong>，这样我们就可以继续使用，继续操作它。</p>
+<p><em>变量提供一个具体的、可供程序操作的存储空间。C++中的每个变量都有它的数据类型，数据类型决定着变量所占的内存空间的大小和布局方式、该空间能存储的值的范围，以及变量能参与的运算。<strong>对于C++程序员来说，“变量(variable)”和 “对象(object)”一般可以互换使用。</strong></em></p>
+<p>[^摘抄]: C++ Primer</p>
+</blockquote>
+<p>当我们创建一个变量时，它会被存储在内存中的两个地方之一，<strong>栈</strong>或者<strong>堆</strong>。</p>
+<p>在C++中，我们有一些原始数据类型。这些原始数据类型基本上构成了我们在程序中存储的任何类型的数据的基础。</p>
+<p>每个数据类型都有其特定的目的，但是你不一定非要用于它特定的目的。C++是一个非常强大的语言，当你真正理解它的时候，它实际上限制非常少。我们可以说，**在C++中，不同的变量类型之间的唯一区别就是 <u>大小</u>**。—— 这个变量它占多大的内存空间，这其实是这些原始数据类型之间的唯一的区别。</p>
+<p><strong>数据类型的实际大小取决于你用的编译器</strong>。</p>
+<p>一般来说一个int是4个字节，因为它只有4个字节，所以我们被限制在它能存储什么样的数字上，严格来说，int是一个带符号整数（signed int），它可以存储的数字范围是负20亿到正20亿。存储比这更大或者更小的东西需要更多的数据来存储，而这个int类型是没法支持的。</p>
+<p>所以，用4个字节的数据，我们可以在这个范围内存储一个值。</p>
+<p>1个字节是8个比特(Bit)，那么4个字节就是32比特，因为这个变量是带符号的，所以其中一个bit被前面的正负号所占用了，留给数字的空间就是后面的31比特，1个bit里面的值呢？计算机以比特序列存储数据，每个比特非0即1，所以每个1比特的数据的内容有两个可能性，所以31个bit的值最多可以是多少呢？就是 2 的 31 次方。所以，我们从0开始算，可以存储到最大21亿，当然也可以往前倒到-21亿。</p>
+<p>那么不需要负数咋办呢？</p>
+<p>在C++中无符号整数，也就是只有正数的整数，就是 <strong>unsigned int</strong>，那么现在，由于不需要单独的bit去存储这个数字的正负号，我们就拥有了32个bit来存储我们的数字，比原来多了1个bit，但是可存储的数据量就成了原来的两倍，因为现在是 <strong>2的32次方</strong>，差不多就是42亿。</p>
+<p>除此之外，我们还有 <strong>char - 一个字节 / short - 两个字节 / long - 通常4个字节，根据编译器不同会有不同 / long long - 8个字节</strong> / <strong>float - 4个字节</strong> / <strong>double - 8个字节</strong> / <strong>bool</strong> - <strong>实际上只有1bit，但是存储的时候一般情况下是一个1个字节</strong></p>
+<pre><code class="cpp">float variable = 5.5;</code></pre>
+<p>当你像上面那样定义了一个float类型的时候，你以为你定义了一个单精度类型，但实际上你定义的是一个双精度，怎么肥4呢？如何区分呢？</p>
+<pre><code class="cpp">float variable = 5.5f;
+double var = 5.5;</code></pre>
+<p>这样就OK啦。</p>
+<p>还有一个原始数据类型——<strong>bool</strong>，它存放的是 <strong>true</strong> 和 <strong>false</strong>。</p>
+<p>但是实际上并不存在什么true和false，这只是两个英语单词，<strong>计算机只处理数字！</strong>，所以基本上这个false其实就是数字0，而0以外的任何东西都是true。</p>
+<p>然而，当我们在处理内存寻址的时候，当我们需要从内存中获取或者存储我们的bool时，**我们没有办法寻址到每个bit，我们只能寻址到bytes，正因如此，我们无法创建一个大小只有1bit的变量类型，<u>因为我们需要能够访问到它</u>**，当然如果你可以巧妙地将8个bool存到一个byte中，那当然是没问题的，这样你就只需要一个byte的内存去存放8个bool变量。</p>
+<p>我们从哪里可以验证和看到不同的数据类型对应的大小呢？</p>
+<p>在C++里，我们可以使用一个叫做 <strong>sizeof()</strong> 的操作符。</p>
+<p>这些原始数据类型是**我们用来定义和存储我们可能创建的任何类型的数据的基础 **，我们也可以将它们转换为 **指针(pointer) 或 引用(reference)**。</p>
+<p><strong>指针</strong>可以通过在你的*<em>类型旁边写一个</em>号来声明<strong>，而</strong>引用<strong>是你的</strong>类型旁边加上一个&amp;符号。**</p>
+<p><strong>！⭐指针和引用是一个很大很复杂也很重要的话题</strong></p>
+<blockquote>
+<p>大多数计算机以2的整数次幂个比特作为块来处理内存，<strong>可寻址的最小内存块</strong>称为**”字节(byte)”<strong>，</strong>存储的基本单元<strong>称为</strong>“字(word)”**，它通常由几个字节组成。</p>
+<p>在C++中，一个字节要至少能容纳机器基本字符集中的字符。大多数机器的字节由8比特构成，字则由32比特或64比特构成，也就是4或8字节。</p>
+<p>大多数计算机将内存中的<strong>每个字节</strong>与**一个数字(被称为 地址 address)**关联起来。</p>
+</blockquote>
+
             </div>
             <hr/>
 
@@ -473,7 +510,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">James Tu</a>
+                    <a href="/about" rel="external nofollow noreferrer">何謂</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -483,7 +520,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/IndieAdam/IndieAdam.github.io/2020/11/04/test-article/">https://github.com/IndieAdam/IndieAdam.github.io/2020/11/04/test-article/</a>
+                    <a href="https://github.com/IndieAdam/IndieAdam.github.io/2020/01/15/C++/08_Variables%20in%20C++/">https://github.com/IndieAdam/IndieAdam.github.io/2020/01/15/C++/08_Variables%20in%20C++/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -496,7 +533,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">James Tu</a>
+                    <a href="/about" target="_blank">何謂</a>
                     !
                 </span>
             </div>
@@ -683,53 +720,16 @@
 
     
 
+    
+
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2020/11/04/test-article/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="test article">
-                        
-                        <span class="card-title">test article</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            This is my first blog
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            James Tu
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/04/hello-world/">
+                <a href="/2020/01/15/hello-world/">
                     <div class="card-image">
                         
                         
@@ -741,17 +741,54 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            何謂
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/01/15/C++/07_How%20the%20C++%20Linker%20works/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            James Tu
+                            何謂
                             
                         </span>
                     </div>
@@ -794,7 +831,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
+        <div class="toc-widget card" style="background-color: white;">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
@@ -952,8 +989,11 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2020</span>
+            
             <span id="year">2019</span>
-            <a href="/about" target="_blank">James Tu</a>
+            <a href="/about" target="_blank">何謂</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -986,7 +1026,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-    <a href="mailto:tubowendev@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -996,7 +1036,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=843997261" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 843997261" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1032,7 +1072,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/search.xml", 'searchInput', 'searchResult');
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
 });
 </script>
 
